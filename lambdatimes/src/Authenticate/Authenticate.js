@@ -6,6 +6,7 @@ export default function authenticate(App, Login) {
       loggedIn: false
     };
 
+// onClick login function to be passed to Login Component
     login = () => {
       localStorage.setItem('loggedIn', 'true');
       this.setState({
@@ -20,7 +21,8 @@ export default function authenticate(App, Login) {
         })
     }
 
-    componentDidUpdate() {
+//  This is irrelevent as no state is stored on App.JS so CDU will never fire
+    /*componentDidUpdate() {
         console.log()
         const logged= !!localStorage.getItem('loggedIn');
         if (this.state.loggedIn !== logged)
@@ -28,7 +30,9 @@ export default function authenticate(App, Login) {
             loggedIn: logged,
         })
     }
+    */
 
+// conditionally render Login or App dependending on wether loggedIn key exists in localstorage
     render() {
       if(this.state.loggedIn) {
           return <App {...this.props}/>

@@ -13,12 +13,4 @@ const App = () => {
 
 const WrappedApp = authenticate(App,Login);
 
-const Ans = () => {
-  return (
-    <div>
-    <WrappedApp />
-    </div>
-  )
-}
-
 export default WrappedApp;
