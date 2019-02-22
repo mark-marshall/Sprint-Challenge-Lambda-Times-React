@@ -1,4 +1,5 @@
 import React from 'react';
+import PT from 'prop-types';
 import styled from 'styled-components';
 
 // Styled-Components
@@ -35,3 +36,7 @@ export default function Login({ login }) {
     </HeaderStyles>
   );
 }
+
+Login.propTypes = { 
+    login: PT.func.isRequired,
+  }
