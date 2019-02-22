@@ -1,12 +1,16 @@
 import React from 'react';
-import ContentRender from './components/Content/ContentRender';
-import  authenticate from './Authenticate/Authenticate';
+import TopBar from './components/TopBar';
+import Header from './components/Header';
+import Content from './components/Content/Content';
+import authenticate from './Authenticate/Authenticate';
 import Login from './components/Login';
 
 const App = () => {
   return (
-    <div>
-    <ContentRender />
+    <div className="App">
+      <TopBar />
+      <Header />
+      <Content />
     </div>
   );
 };
