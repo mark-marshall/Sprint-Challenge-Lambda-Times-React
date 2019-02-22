@@ -11,4 +11,14 @@ const App = () => {
   );
 };
 
-export default authenticate(App, Login);
+const WrappedApp = authenticate(App,Login);
+
+const Ans = () => {
+  return (
+    <div>
+    <WrappedApp />
+    </div>
+  )
+}
+
+export default WrappedApp;

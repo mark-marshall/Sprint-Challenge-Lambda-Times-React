@@ -13,8 +13,21 @@ export default function authenticate(App, Login) {
       })
     };
 
-    //ComponentDidMountHere
-    //ComponeentDidUnmountHere
+    componentDidMount() {
+        const logged = !!localStorage.getItem('loggedIn');
+        this.setState({
+            loggedIn: logged,
+        })
+    }
+
+    componentDidUpdate() {
+        console.log()
+        const logged= !!localStorage.getItem('loggedIn');
+        if (this.state.loggedIn !== logged)
+        this.setState({
+            loggedIn: logged,
+        })
+    }
 
     render() {
       if(this.state.loggedIn) {
