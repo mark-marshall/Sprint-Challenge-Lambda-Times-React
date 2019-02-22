@@ -42,7 +42,7 @@ export default class Carousel extends Component {
   render(){
     return (
       <div className="carousel">
-        <img src={this.state.images[this.state.arrayRefOfCurrent]} style={{display: 'block'}} />
+        <img src={this.state.images[this.state.arrayRefOfCurrent]} style={{display: 'block'}} alt={'snowy'} />
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
         <div className="right-button" onClick={this.rightClick}>{">"}</div>
       </div>

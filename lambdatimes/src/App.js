@@ -1,16 +1,14 @@
 import React from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import ContentRender from './components/Content/ContentRender';
+import  authenticate from './Authenticate/Authenticate';
+import Login from './components/Login';
 
 const App = () => {
   return (
-    <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
+    <div>
+    <ContentRender />
     </div>
   );
 };
 
-export default App;
+export default authenticate(App, Login);
