@@ -45,7 +45,7 @@ letter-spacing: 1px;
 text-align: right;
 margin-right: 25px;
 flex: 1;
-`
+`;
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
